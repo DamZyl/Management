@@ -25,6 +25,6 @@ public class Boots extends Product
     @Override
     public String toString()
     {
-        return super.toString() + PR_SEPERATOR + size + PR_SEPERATOR + isNaturalSkin;
+        return super.toString() + PR_SEPARATOR + size + PR_SEPARATOR + isNaturalSkin;
     }
 }

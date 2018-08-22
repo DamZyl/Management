@@ -28,7 +28,7 @@ public class ProductParser
 
     public static Boots convertToBoots(String productStr)
     {
-        String[] productInfo = productStr.split(Product.PR_SEPERATOR);
+        String[] productInfo = productStr.split(Product.PR_SEPARATOR);
 
         int id = Integer.parseInt(productInfo[0]);
         String productName = productInfo[1];
@@ -44,7 +44,7 @@ public class ProductParser
 
     public static Cloth convertToCloth(String productStr)
     {
-        String[] productInfo = productStr.split(Product.PR_SEPERATOR);
+        String[] productInfo = productStr.split(Product.PR_SEPARATOR);
 
         int id = Integer.parseInt(productInfo[0]);
         String productName = productInfo[1];
@@ -60,7 +60,7 @@ public class ProductParser
 
     public static Product convertToProduct(String productStr)
     {
-        String[] productInfo = productStr.split(Product.PR_SEPERATOR);
+        String[] productInfo = productStr.split(Product.PR_SEPARATOR);
 
         int id = Integer.parseInt(productInfo[0]);
         String productName = productInfo[1];

@@ -25,6 +25,6 @@ public class Cloth extends Product
     @Override
     public String toString()
     {
-        return super.toString() + PR_SEPERATOR + size + PR_SEPERATOR + material;
+        return super.toString() + PR_SEPARATOR + size + PR_SEPARATOR + material;
     }
 }

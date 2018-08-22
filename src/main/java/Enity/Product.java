@@ -2,7 +2,7 @@ package Enity;
 
 public class Product
 {
-    public final static String PR_SEPERATOR = "|";
+    public final static String PR_SEPARATOR = "#";
 
     private int id;
     private String productName;
@@ -11,7 +11,7 @@ public class Product
     private String color;
     private int productCount;
 
-    public Product(int id, String productName, double price, double weight, String color, int productCount) // zrobic warunki
+    public Product(int id, String productName, double price, double weight, String color, int productCount)
     {
         this.id = id;
         this.productName = productName;
@@ -64,6 +64,6 @@ public class Product
     @Override
     public String toString()
     {
-        return id + PR_SEPERATOR + productName + PR_SEPERATOR + price + PR_SEPERATOR + weight + PR_SEPERATOR + color + PR_SEPERATOR + productCount;
+        return id + PR_SEPARATOR + productName + PR_SEPARATOR + price + PR_SEPARATOR + weight + PR_SEPARATOR + color + PR_SEPARATOR + productCount;
     }
 }

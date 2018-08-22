@@ -2,7 +2,7 @@ package Enity;
 
 public class User
 {
-    public final static String USER_SEPARATOR = "|";
+    public final static String USER_SEPARATOR = "#";
 
     private int id;
     private String login;

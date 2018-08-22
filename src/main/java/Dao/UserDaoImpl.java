@@ -29,12 +29,12 @@ public class UserDaoImpl implements UserDao
     @Override
     public void saveUsers(List<User> users) throws FileNotFoundException
     {
-        FileUtils.clearFile(fileName);
-        PrintWriter printWriter = new PrintWriter(fileName);
+        //FileUtils.clearFile(fileName);
+        PrintWriter printWriter = new PrintWriter(new FileOutputStream(fileName, true));
 
         for(User user: users)
         {
-            printWriter.println(users.toString());
+            printWriter.println(user.toString());
         }
 
         printWriter.close();
@@ -85,10 +85,10 @@ public class UserDaoImpl implements UserDao
         {
             User user = UserParser.stringToUser(readLine);
 
-            if(user != null)
+            /*if(user != null)
             {
                 users.add(user);
-            }
+            }*/
 
             readLine = reader.readLine();
         }
