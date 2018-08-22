@@ -2,6 +2,8 @@ package Enity;
 
 public class User
 {
+    public final static String USER_SEPARATOR = "|";
+
     private int id;
     private String login;
     private String password;
@@ -31,10 +33,6 @@ public class User
     @Override
     public String toString()
     {
-        return "User{" +
-                "id = " + this.getId() +
-                ", login = '" + this.getLogin() + '\'' +
-                ", password = '" + this.getPassword() + '\'' +
-                '}';
+        return id + USER_SEPARATOR + login + USER_SEPARATOR + password;
     }
 }

@@ -2,6 +2,8 @@ package Enity;
 
 public class Product
 {
+    public final static String PR_SEPERATOR = "|";
+
     private int id;
     private String productName;
     private double price;
@@ -62,13 +64,6 @@ public class Product
     @Override
     public String toString()
     {
-        return "Product{" +
-                "id = " + this.getId() +
-                ", productName = '" + this.getProductName() + '\'' +
-                ", price = " + this.getPrice() +
-                ", weight = " + this.getWeight() +
-                ", color = '" + this.getColor() + '\'' +
-                ", productCount = " + this.getProductCount() +
-                '}';
+        return id + PR_SEPERATOR + productName + PR_SEPERATOR + price + PR_SEPERATOR + weight + PR_SEPERATOR + color + PR_SEPERATOR + productCount;
     }
 }
