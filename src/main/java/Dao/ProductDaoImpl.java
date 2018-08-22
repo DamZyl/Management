@@ -32,7 +32,7 @@ public class ProductDaoImpl implements ProductDao
    public void saveProducts(List<Product> products) throws FileNotFoundException
     {
         FileUtils.clearFile(fileName);
-        PrintWriter printWriter = new PrintWriter(fileName);
+        PrintWriter printWriter = new PrintWriter(new FileOutputStream(fileName, true));
 
         for(Product product: products)
         {
