@@ -10,7 +10,7 @@ import java.util.List;
 public class ProductServiceImplTest
 {
     @Test
-    public void testGetAllProductsEqual()
+    public void testGetAllProductsPositive()
     {
         //is
         List<Product> products = new ArrayList<Product>();
@@ -26,7 +26,7 @@ public class ProductServiceImplTest
     }
 
     @Test
-    public void testGetAllProductsNotEqual()
+    public void testGetAllProductsNegative()
     {
         //is
         List<Product> products = new ArrayList<Product>();
@@ -42,7 +42,7 @@ public class ProductServiceImplTest
     }
 
     @Test
-    public void testGetProductCountEqual()
+    public void testGetProductCountPositive()
     {
         //is
         List<Product> products = new ArrayList<Product>();
@@ -58,7 +58,7 @@ public class ProductServiceImplTest
     }
 
     @Test
-    public void testGetProductCountNotEqual()
+    public void testGetProductCountNegative()
     {
         //is
         List<Product> products = new ArrayList<Product>();
@@ -73,7 +73,7 @@ public class ProductServiceImplTest
     }
 
     @Test
-    public void testGetProductByProductNameEqual()
+    public void testGetProductByProductNamePositive()
     {
         //is
         List<Product> products = new ArrayList<Product>();
@@ -90,7 +90,7 @@ public class ProductServiceImplTest
     }
 
     @Test
-    public void testGetProductByProductNameNotEqual()
+    public void testGetProductByProductNameNegative()
     {
         //is
         List<Product> products = new ArrayList<Product>();
@@ -107,7 +107,7 @@ public class ProductServiceImplTest
     }
 
     @Test
-    public void testIsProductInStoreEqual()
+    public void testIsProductInStorePositive()
     {
         //is
         List<Product> products = new ArrayList<Product>();
@@ -122,7 +122,7 @@ public class ProductServiceImplTest
     }
 
     @Test
-    public void testIsProductInStoreNotEqual()
+    public void testIsProductInStoreNegative()
     {
         //is
         List<Product> products = new ArrayList<Product>();
@@ -137,7 +137,7 @@ public class ProductServiceImplTest
     }
 
     @Test
-    public void testIsProductExistNameEqual()
+    public void testIsProductExistNamePositive()
     {
         //is
         List<Product> products = new ArrayList<Product>();
@@ -152,7 +152,23 @@ public class ProductServiceImplTest
     }
 
     @Test
-    public void testIsProductExistIdEqual()
+    public void testIsProductExistNameNegative()
+    {
+        //is
+        List<Product> products = new ArrayList<Product>();
+        products.add(new Cloth(1, "Sweter", 75, 0.35, "bialy", 50, "S", "bawelna"));
+        products.add(new Cloth(2, "T-Shirt", 50, 0.25, "czerwony", 25, "M", "bawelna"));
+
+        //then
+        ProductServiceImpl productService = new ProductServiceImpl(products);
+        final boolean isProductExists = productService.isProductExists("Bluza");
+
+        //expected
+        Assert.assertFalse(isProductExists);
+    }
+
+    @Test
+    public void testIsProductExistIdPositive()
     {
         //is
         List<Product> products = new ArrayList<Product>();
@@ -168,7 +184,7 @@ public class ProductServiceImplTest
     }
 
     @Test
-    public void testIsProductExistIdNotEqual()
+    public void testIsProductExistIdNegative()
     {
         //is
         List<Product> products = new ArrayList<Product>();
