@@ -35,11 +35,11 @@ public class UserServiceImpl implements UserService
     @Override
     public void removeUserById(int userId)
     {
-        for(User user: users)
+        for(int i = 0; i < users.size(); i++)
         {
-            if(user.getId() == userId)
+            if(users.get(i).getId() == userId)
             {
-                users.remove(user);
+                users.remove(i);
                 break;
             }
         }

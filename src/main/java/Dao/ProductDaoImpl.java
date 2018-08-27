@@ -47,11 +47,11 @@ public class ProductDaoImpl implements ProductDao
     {
         List<Product> products = this.getAllProducts();
 
-        for(Product product: products)
+        for(int i = 0; i < products.size(); i++)
         {
-            if(product.getId() == id)
+            if(products.get(i).getId() == id)
             {
-                products.remove(product);
+                products.remove(i);
                 break;
             }
         }
@@ -64,11 +64,11 @@ public class ProductDaoImpl implements ProductDao
     {
         List<Product> products = this.getAllProducts();
 
-        for(Product product: products)
+        for(int i = 0; i < products.size(); i++)
         {
-            if(product.getProductName().equals(productName))
+            if(products.get(i).getProductName().equals(productName))
             {
-                products.remove(product);
+                products.remove(i);
                 break;
             }
         }

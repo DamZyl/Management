@@ -45,11 +45,11 @@ public class UserDaoImpl implements UserDao
     {
         List<User> users = this.getAllUsers();
 
-        for(User user: users)
+        for(int i = 0; i < users.size(); i++)
         {
-            if(user.getId() == id)
+            if(users.get(i).getId() == id)
             {
-                users.remove(user);
+                users.remove(i);
                 break;
             }
         }
@@ -62,11 +62,11 @@ public class UserDaoImpl implements UserDao
     {
         List<User> users = this.getAllUsers();
 
-        for(User user: users)
+        for(int i = 0; i < users.size(); i++)
         {
-            if(user.getLogin().equals(login))
+            if(users.get(i).getLogin().equals(login))
             {
-                users.remove(user);
+                users.remove(i);
                 break;
             }
         }
