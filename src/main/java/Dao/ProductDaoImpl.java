@@ -13,11 +13,21 @@ public class ProductDaoImpl implements ProductDao
     private final String fileName;
     private final String productType;
 
-    public ProductDaoImpl(String fileName, String productType) throws IOException
+    public ProductDaoImpl(String fileName, String productType)
     {
         this.fileName = fileName;
         this.productType = productType;
-        FileUtils.createNewFile(fileName);
+
+        try
+        {
+            FileUtils.createNewFile(fileName);
+        }
+
+        catch(IOException e)
+        {
+            System.out.println("Error with file");
+            System.exit(-1);
+        }
     }
 
     @Override
