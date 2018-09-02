@@ -19,15 +19,15 @@ public class Main
         Boots boots = new Boots(1, "High heels", 99.9, 0.5, "Red", 12, 35, false);
         Boots boots1 = new Boots(2, "High heels", 199.9, 0.5, "Grey", 35, 42, true);
 
-        ProductDao productClothDao = new ProductDaoImpl("clothes", "Cloth");
+        ProductDao productClothDao = new ProductDaoImpl("clothes.txt", "Cloth");
         productClothDao.saveProduct(cloth);
         productClothDao.saveProduct(cloth1);
 
-        ProductDao productBootsDao = new ProductDaoImpl("boots", "Boots");
+        ProductDao productBootsDao = new ProductDaoImpl("boots.txt", "Boots");
         productBootsDao.saveProduct(boots);
         productBootsDao.saveProduct(boots1);
 
-        UserDao userDao = new UserDaoImpl("users");
+        UserDao userDao = UserDaoImpl.getInstance();
         userDao.saveUser(user);
         userDao.saveUser(user1);
     }

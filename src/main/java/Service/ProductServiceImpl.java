@@ -11,7 +11,7 @@ import java.util.List;
 
 public class ProductServiceImpl implements ProductService
 {
-    private ProductDao productDao = new ProductDaoImpl("products", "Product");
+    private ProductDao productDao = new ProductDaoImpl("products.txt", "Product");
     private static ProductServiceImpl instance = null;
 
     public static ProductServiceImpl getInstance()
